@@ -37,19 +37,34 @@ namespace Editor
         {
             var username = textBoxUser.Text;
             var password = textBoxPassword.Text;
-            if (UsuariosDAO.existeUsuario(username, password))
+            var servidor = UsuariosDAO.checkServidor();
+            if (servidor)
             {
-                var formApp = new FormApp(this, username);
-                formApp.Show();
-                this.Hide();
-                resetearForm();
+                if (UsuariosDAO.existeUsuario(username,password))
+                {
+                    var formApp = new FormApp(this, username);
+                    formApp.Show();
+                    this.Hide();
+                    resetearForm();
+                }
+                else
+                {
+                    labelEstado.Text = "El usuario o contraseña son incorrectos";
+                    MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    limpiarCampos();
+                }
             }
             else
             {
-                labelEstado.Text = "El usuario o contraseña son incorrectos";
-                MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                limpiarCampos();
+                labelEstado.Text = "Servidor no disponible";
+                MessageBox.Show("Nuestros servidores estan en mantenimiento por favor intentalo mas tarde", "Servidor no disponible", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                limpiarCampos(); 
             }
+           
+
+
+
+
 
         }
 

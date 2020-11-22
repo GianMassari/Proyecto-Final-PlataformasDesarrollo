@@ -11,12 +11,30 @@ namespace Editor.DAOs
 {
     class UsuariosDAO
     {
-       public static List<Usuario> listaUsuario = new List<Usuario>();
+        public static List<Usuario> listaUsuario = new List<Usuario>();
         public static void iniciar()
         {
             listaUsuario.Add(new Usuario("asd", "asd"));
             listaUsuario.Add(new Usuario("", ""));
             listaUsuario.Add(new Usuario("admin", "admin"));
+        }
+
+      public static bool checkServidor()
+        {
+            var client = new RestClient("https://localhost:44329/");
+
+            var request = new RestRequest("/isOn");
+            request.RequestFormat = DataFormat.Json;
+            var response = client.Get(request).Content;
+            if (response =="")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+          
         }
         public static bool existeUsuario(string usuario, string password)
         {
@@ -26,11 +44,9 @@ namespace Editor.DAOs
             var request = new RestRequest("/" + usuario + "/" + password + "/MasSeguroImposible");
             request.RequestFormat = DataFormat.Json;
             var response = client.Get(request).Content;
-           var estado= JsonConvert.DeserializeObject<dynamic>(response);
-            bool mybool = System.Convert.ToBoolean(estado);
-            return mybool;
-            
-             
+            var estado = System.Convert.ToBoolean(JsonConvert.DeserializeObject<dynamic>(response));
+            return estado;
+          
             }
       
       

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/CYC4clhGyDUBtnmtQkUF02PYcw6GJs27xOKTluwnsmxJSeDfnWNKhQmBRe8AgL7jp/+wbm7me11DPa+5SBiZQ==",
+  "dgSpecHash": "j6fhpPxe/7aq3ikz4T+Fv95XCmk/9O59iGF5vi7Cl2VXxbXZHUGoIJiH5TqWl63n0vb0ysI8DJUuqXRACednDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\plataforma de desarrolo\\PaginaWeb\\Simplex.csproj",
+  "projectFilePath": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\githubrepositorios\\Proyecto-Final-PlataformasDesarrollo\\PaginaWeb\\Simplex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gmarc\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\gmarc\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",

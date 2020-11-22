@@ -101,7 +101,7 @@
             // 
             this.labelEstado.AutoSize = true;
             this.labelEstado.ForeColor = System.Drawing.Color.Red;
-            this.labelEstado.Location = new System.Drawing.Point(35, 33);
+            this.labelEstado.Location = new System.Drawing.Point(36, 33);
             this.labelEstado.Name = "labelEstado";
             this.labelEstado.Size = new System.Drawing.Size(0, 16);
             this.labelEstado.TabIndex = 5;

@@ -280,6 +280,24 @@ namespace PaginaWeb.Controllers
             }
            
         }
+        //CHECK SI SERVIDOR ESTA ON
+        [HttpGet("{checkServidor}")]
+        public string checkServidor(string checkServidor)
+        {
+            if (checkServidor == "isOn")
+            {
+                dynamic estado = new ExpandoObject();
+                estado = true;
+                return JsonConvert.SerializeObject(estado);
+            }
+            else
+            {
+                return "No estas autorizado a consultar la api";
+            }
+
+
+
+        }
 
 
 

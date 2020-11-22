@@ -90,8 +90,8 @@ body {
 }
 
 
-.hero-text {
-    text-shadow: 2px 2px black;
+.TituloImagen {
+    text-shadow: 3px 2px black;
     text-align: center;
     position: absolute;
     top: 25%;
@@ -176,11 +176,14 @@ p {
    
 }
 
-
-
 .bodyPrivacy {
     background-color: #f1f4fa;
 }
 .tituloAPP {
     font-weight: lighter;
+}
+
+.h2titulo {
+    font-weight: 300;
+    line-height: 1.2;
 }

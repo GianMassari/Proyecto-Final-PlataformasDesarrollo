@@ -5640,11 +5640,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\plataforma de desarrolo\\PaginaWeb\\Simplex.csproj",
+      "projectUniqueName": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\githubrepositorios\\Proyecto-Final-PlataformasDesarrollo\\PaginaWeb\\Simplex.csproj",
       "projectName": "Simplex",
-      "projectPath": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\plataforma de desarrolo\\PaginaWeb\\Simplex.csproj",
+      "projectPath": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\githubrepositorios\\Proyecto-Final-PlataformasDesarrollo\\PaginaWeb\\Simplex.csproj",
       "packagesPath": "C:\\Users\\gmarc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\plataforma de desarrolo\\PaginaWeb\\obj\\",
+      "outputPath": "C:\\Users\\gmarc\\Desktop\\escritorio_facultad\\githubrepositorios\\Proyecto-Final-PlataformasDesarrollo\\PaginaWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
