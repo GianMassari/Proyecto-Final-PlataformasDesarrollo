@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{ var usuario = ViewBag.usuario; }
+
+<body class="bodyLogin">
+    <div class="login-form">
+        <form asp-controller="Home" asp-action="ModificarUser" method="post">
+            <div class="avatar">
+                <img src="/img/avatar.png" alt="Avatar">
+            </div>
+            <h2 class="text-center">Mi Perfil</h2>
+            <h3 class="text-center">@usuario</h3>
+            <p class="text-danger">@ViewBag.error</p>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password1" placeholder="Nueva contraseña" required="required">
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" name="password2" placeholder="Repita la Contraseña" required="required">
+            </div>
+            <input type="hidden" name="username" value="@usuario" />
+            <div class="form-group">
+                <button type="submit"  value="CambiarPassword" class="btn btn-primary btn-lg btn-block">
+                    Cambiar Contraseña
+                </button>
+            </div>
+        </form>
+    </div>
+</body>

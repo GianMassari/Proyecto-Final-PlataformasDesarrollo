@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<body class="bodyLogin">
+    <div class="login-form">
+        <form asp-controller="Home" asp-action="AgregarUsuario" method="post">
+            <div class="avatar">
+                <img src="/img/avatar.png" alt="Avatar">
+            </div>
+            <h2 class="text-center">Registro</h2>
+            <p class="text-danger">@ViewBag.error</p>
+            <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Usuario" required="required">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Contraseña" required="required">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="clave" placeholder="Clave serial del producto" required="required">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    Registrarse
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+

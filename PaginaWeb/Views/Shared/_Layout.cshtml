@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Simplex</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/registro.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Inicio"><img src="/img/logo2.png" alt="logo" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar-expand-md">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Inicio">Home</a>
+                        </li>
+                    </ul>
+
+                    @if (ViewBag.usuario != null)
+                    {
+                        <ul class="navbar-nav flex-grow-1 flex-start">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Aplicacion</a>
+                            </li>
+                        </ul>
+                      
+                         <div class="dropdown">
+                             <button class="btn dropdown-toggle usuarioOpciones" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 @ViewBag.usuario
+                             </button>
+                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                 <div>
+                                     <a class="nav-link text-dark dropdownPerfil" asp-area="" asp-controller="Home" asp-action="Perfil"><i class="fa fa-user pr-2" aria-hidden="true"></i>Mi perfil</a>
+                                 </div>
+                                 <div>
+                                     <a class="nav-link text-dark lineaUser" asp-area="" asp-controller="Home" asp-action="LogOut"><i class="fa fa-power-off pr-2" aria-hidden="true"></i>Cerrar Sesion</a>
+                                 </div>
+                             </div>
+                         </div>
+                      
+                    }
+                    else
+                    {
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item d-flex justify-content-md-end">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="LogIn">Iniciar sesion</a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-md-end">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Registro">Registrarse</a>
+                            </li>
+                        </ul>
+                    }
+
+                </div>
+            </div>
+        </nav>
+    </header>
+  
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+ 
+
+    <footer class="border-top footer text-muted footerFondo">
+        <div class="container">
+            &copy; 2020 - Gian Marco Massari
+        </div>
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
